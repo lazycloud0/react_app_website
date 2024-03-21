@@ -1,0 +1,9 @@
+.review-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-text .review-header {
+  text-align: center;
+}

@@ -4,17 +4,17 @@ import React, { useState, useEffect } from "react";
 import "./Country_Btn.css";
 
 export default function Buttons() {
-  const [countryToggle, setCountryToggle] = useState({
-    country: "",
-    isVisible: false,
+  const [country, setCountry] = useState({
+    current: "",
+    shown: false,
   });
   const [reviews, setReviews] = useState([]);
-  console.log(countryToggle);
+  console.log(country);
 
   useEffect(() => {
-    if (countryToggle.country && countryToggle.isVisible) {
+    if (country.current && country.shown) {
       fetch(
-        `https://seal-app-336e8.ondigitalocean.app/reviews?country=${countryToggle.country}`
+        `https://seal-app-336e8.ondigitalocean.app/reviews?country=${country.current}`
       )
         .then((response) => response.json())
         .then((json) => setReviews(json));
@@ -37,13 +37,13 @@ export default function Buttons() {
     //   console.log(reviews);
     // };
     // fetchData();
-  }, [countryToggle]);
+  }, [country]);
 
-  const handleClick = (country) => {
-    const isSameCountry = countryToggle.country === country;
-    const isVisible = isSameCountry ? !countryToggle.isVisible : true;
+  const handleClick = (current) => {
+    const isSameCountry = country.current === current;
+    const shown = isSameCountry ? !country.shown : true;
 
-    setCountryToggle({ country, isVisible });
+    setCountry({ current, shown });
   };
 
   return (

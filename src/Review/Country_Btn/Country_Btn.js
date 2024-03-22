@@ -44,6 +44,10 @@ export default function Buttons() {
     const shown = isSameCountry ? !country.shown : true;
 
     setCountry({ current, shown });
+
+    if (isSameCountry && !shown) {
+      setReviews([]);
+    }
   };
 
   return (
@@ -59,12 +63,12 @@ export default function Buttons() {
         </div>
       )}
       {reviews && (
-        <div className="reviewText">
+        <div className="reviewAuthor">
           <p>{reviews.author}</p>
         </div>
       )}
       {reviews && (
-        <div className="reviewText">
+        <div className="reviewLocation">
           <p>{reviews.location}</p>
         </div>
       )}

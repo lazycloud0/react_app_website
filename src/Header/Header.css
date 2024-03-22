@@ -1,13 +1,13 @@
 .header {
-    background-color: white;
-    font-size: 25px;
-    font-weight: bold;
-    width: 370px;
-  }
+  background-color: white;
+  font-size: 25px;
+  font-weight: bold;
+  width: 370px;
+}
 
 .link {
   color: gray;
-  font-size: 15px;
+  font-size: 13px;
   float: right;
   padding-top: 8px;
 }

@@ -1,6 +1,15 @@
 //import "react";
-//import "./founders.css";
+import "./page.css";
 
-export default function founders() {
-  return <h1>Founders</h1>;
+import Header from "/Users/winnielau/Desktop/SoC/Practice/react_app_website/src/Header/Header.js";
+import Footer from "/Users/winnielau/Desktop/SoC/Practice/react_app_website/src/Footer/Footer.js";
+
+export default function Founders() {
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }

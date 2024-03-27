@@ -17,6 +17,13 @@ import { initial_state, reducer } from "./ContactFormReducer.js";
 // --> error message added in JSX ✅
 // --> checked if everything works✅
 
+// --> postcode validation
+// --> define actions for postcode validation: "FETCH_START", "FETCH_SUCCESS", "FETCH_ERROR"
+// --> create handleFetch function
+// --> implement dispatch in handleFetch function
+// --> update JSX <button onClick={handleFetch}>
+// --> loading status message
+
 export default function ContactForm() {
   // created state object in reducer component
 
@@ -74,10 +81,35 @@ export default function ContactForm() {
         },
       });
     }
+  }
+  // create handleFetch function to check postcode with external API
+  async function handleFetch() {
+    // fetch data
+    dispatch({ type: "FETCH_START" });
+    try {
+      // fetching postcode data from external API
+      const res = await fetch(
+        `https://postcodes.io/postcodes/${state.postcode}`
+      );
+      const data = await res.json();
+      const country = data.result.country;
 
-    //console.log(
-    //`Name: ${state.data.name}, Postcode: ${state.data.postcode}, Address: ${state.data.address}, City: ${state.data.city}, Phone ///Number: ${state.data.phoneNumber}, Email Address ${state.data.emailAddress}`
-    //);
+      // validating the countries
+      if (
+        country === "England" ||
+        country === "Wales" ||
+        country === "Scotland"
+      ) {
+        // upon success: => FETCH SUCCESS
+        dispatch({ type: "FETCH_SUCCESS" });
+      } else {
+        // upon error: => FETCH ERROR
+        dispatch({ type: "FETCH_ERROR" });
+      }
+      // error handling
+    } catch (err) {
+      dispatch({ type: "FETCH_ERROR" });
+    }
   }
 
   // update JSX attributes -- values
@@ -159,7 +191,14 @@ export default function ContactForm() {
         {state.errorStatus && <p>There are empty fields</p>}
         <div className="bigger-button-div">
           <div className="button-div">
-            <button type="submit" className="submit-button">
+            <button
+              type="submit"
+              className="submit-button"
+              // added handleFetch to button
+              onClick={handleFetch}
+            >
+              {/* loading status message */}
+              {state.loading ? "Validating postcode" : ""}
               Request Design Consultation
             </button>
           </div>

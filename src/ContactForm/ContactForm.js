@@ -4,25 +4,29 @@ import "./ContactForm.css";
 import { useReducer } from "react";
 import { initial_state, reducer } from "./ContactFormReducer.js";
 
-// —> Refactor existing useState codes to reducer function
+// —> Refactor existing useState codes to reducer function ✅
 // —> Create state object ✅
 // —> Create reducer function - switch cases with various function  ✅
 // —> update handleChange - with dispatch actions  ✅
 // —> update variables in JSX ✅
 // —> check if everything works ✅
 
-// --> input validation
+// --> input validation ✅
 // --> "empty-input" action created ✅
 // --> implement dispatch in handleSubmit ✅
 // --> error message added in JSX ✅
-// --> checked if everything works✅
+// --> checked if everything works ✅
 
-// --> postcode validation
-// --> define actions for postcode validation: "FETCH_START", "FETCH_SUCCESS", "FETCH_ERROR"
-// --> create handleFetch function
-// --> implement dispatch in handleFetch function
-// --> update JSX <button onClick={handleFetch}>
-// --> loading status message
+// --> postcode validation ✅
+// --> define actions for postcode validation: ✅
+// --> "FETCH_START" ✅
+// --> "FETCH_SUCCESS" ✅
+// --> "FETCH_ERROR" ✅
+// --> create handleFetch function ✅
+// --> implement dispatch in handleFetch function ✅
+// --> update JSX <button onClick={handleFetch}> ✅
+// --> loading status message ✅
+// --> checked if everything works ✅
 
 export default function ContactForm() {
   // created state object in reducer component

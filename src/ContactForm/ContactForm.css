@@ -1,0 +1,43 @@
+.form-div {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(203, 203, 203);
+    padding: 10px;
+}
+
+.form-headers {
+    font-size: medium;
+    padding: 5px;
+}
+
+.labels-inputs {
+    padding: 5px;
+    font-size: small;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    width: 300px;
+    padding: 10px;
+}
+
+.submit-button {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+    color: black;
+    font-size: small;
+}
+
+.bigger-button-div {
+    display: flex;
+    justify-content: center;
+    width: 370px;
+    padding: 10px;
+}

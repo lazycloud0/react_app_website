@@ -3,7 +3,7 @@ import "./Main.css";
 import HeaderMain from "./Header_Main/Header_Main.js";
 import InfoCard from "./Info_Card/Info_Card.js";
 
-
+// called children elements Header and InfoCards with various props
 export default function Main() {
   return (
     <>

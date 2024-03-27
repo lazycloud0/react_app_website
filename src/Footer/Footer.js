@@ -1,6 +1,8 @@
 import "react";
 import "./Footer.css";
 
+// created left column with footer header with social media links 
+// created right column with email
 export default function Footer() {
   return (
     <>
@@ -11,11 +13,9 @@ export default function Footer() {
             <li>
               <a href="https://www.facebook.com">Facebook</a>
             </li>
-            <br />
             <li>
               <a href="https://www.instagram.com">Instagram</a>
             </li>
-            <br />
             <li>
               <a href="https://www.tiktok.com">TikTok</a>
             </li>

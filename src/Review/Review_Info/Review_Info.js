@@ -1,7 +1,7 @@
 import "react";
 import "./Review_Info.css"
 
-export default function Review() {
+export default function Review_Info() {
   return (
     <>
       <div className="review-info">

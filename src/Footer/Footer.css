@@ -5,3 +5,7 @@ footer {
   justify-content: space-between;
   padding: 10px;
 }
+
+ul {
+  list-style: none;
+}

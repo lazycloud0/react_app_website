@@ -1,8 +1,10 @@
 import "react";
 import "./Hero.css";
 import Image from "next/image";
-//import heroDesktop from "../public/hero-mobile.png";
+import Link from "next/link";
+//import heroDesktop from "../public/hero-desktop.png";
 
+//created hero section with image and description
 export default function Hero() {
   return (
     <>
@@ -11,7 +13,7 @@ export default function Hero() {
       <div className="additional-info">
         <h1 id="add-info-header">Discover the Perfect Fireplace ...</h1>
         <p id="add-info-text">
-          Book a consultation: <span>0121 345 6789</span>
+          <Link href="/booking" className="link"> Book Consultation</Link>
         </p>
       </div>
     </>

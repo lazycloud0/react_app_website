@@ -1,7 +1,8 @@
-.info-cards {
+.info-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .info-text {

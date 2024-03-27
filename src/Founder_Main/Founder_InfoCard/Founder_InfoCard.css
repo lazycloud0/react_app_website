@@ -1,0 +1,15 @@
+.info-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 20px 10px 10px 10px;
+}
+
+.info-text .info-header {
+  text-align: left;
+  font-style: normal;
+}
+
+img {
+  margin-top: 15px;
+}

@@ -1,5 +1,44 @@
 .button-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding-top: 10px;
+  width: 370px;
+  margin: 10px;
+}
+
+.button {
+  background-color: grey;
+  color: white;
+  font-size: small;
+  border: 0px;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100px;
+}
+
+.button-active {
+  background-color: orange;
+  color: white;
+  font-size: small;
+  border: 0px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100px;
+}
+
+.reviewText {
+  background-color: rgb(230, 230, 230);
+  padding: 5px 5px 10px 10px;
+  border-radius: 8px;
+}
+
+.reviewInfo {
+  width: 370px;
+}
+
+.info {
+  float: right;
+  font-size: 13px;
+  text-decoration: underline;
 }

@@ -202,7 +202,7 @@ export default function ContactForm() {
               onClick={handleFetch}
             >
               {/* loading status message */}
-              {state.loading ? "Validating postcode" : ""}
+              {state.loading ? "Validating postcode" : "Try again"}
               Request Design Consultation
             </button>
           </div>

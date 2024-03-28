@@ -6,8 +6,10 @@ export const initial_state = {
   city: "",
   phoneNumber: "",
   email: "",
-  loading: false,
   errorStatus: false,
+  apiError: false,
+  loading: false,
+  unfilled: true,
 };
 
 // create reducer function
@@ -16,37 +18,42 @@ export function reducer(state, action) {
     // create actions
     // action upon changes in the form
     case "CHANGE_FORM_DATA": {
-      return { ...state, [action.payload.name]: action.payload.value };
+      state = { ...state, [action.payload.name]: action.payload.value };
+      return state;
     }
     // action upon submitting form
     case "SUBMIT_FORM_DATA": {
-      console.log(state);
-      return {
+      state = {
         ...state,
         [action.payload.name]: action.payload.value,
         errorStatus: false,
       };
+      console.log(state);
+      return state;
     }
     // action upon empty input fields
     case "EMPTY_INPUT": {
-      return { ...state, errorStatus: true };
+      state = { ...state, errorStatus: true };
+      console.log(state);
+      return state;
     }
-
     // actions upon checking postcode with external API
     // to fetch data
     case "FETCH_START": {
-      return { ...state, loading: true, errorStatus: false };
+      state = { ...state, loading: true, apiError: false };
+      return state;
     }
     // when fetching is successful
     case "FETCH_SUCCESS": {
       console.log("valid postcode");
-      return { ...state, loading: false, errorStatus: false };
+      return { ...state, loading: false, apiError: false, unfilled: false, };
     }
     // when there is error
     case "FETCH_ERROR": {
       console.log("invalid postcode");
-      return { ...state, loading: false, errorStatus: true };
+      return { ...state, loading: false, apiError: true };
     }
+
     // set default action
     default:
       return state;

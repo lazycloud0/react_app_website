@@ -67,7 +67,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Objectives:
 • Users should see a link on the home page saying "Book Consultation", they should not see the phone number anymore.
 // —> update the main page ✅
-• Users should be able to click the link and go to a "Design Booking" page ("/booking"
+• Users should be able to click the link and go to a "Design Booking" page ("/booking")
 // —> create booking page
 // —> create link on main page ✅
 • When a user reaches the "Design Booking" page they should see a simple form that matches the designs you've been given.
@@ -77,49 +77,53 @@ Objectives:
 // —> import to design booking page ✅
 // —> CSS design ref for form ✅
 • When a user submits the form it should validate that no fields are empty. 
-//—> useState for each input
-// —> handler function: connect inputs to handler
-// —> onSubmit handler
+//—> useState for each input ✅
+// —> handler function: connect inputs to handler ✅
+// —> onSubmit handler ✅
 —> validation of the input fields
-// —> return criteria
+// —> return criteria ✅
 • If there is an empty form field show an error.
-// —> error handling
+// —> error handling ✅
 • If there is no error then console log the form data 🙂 (don't worry about posting the data anywhere).
-// —> getting values from input
-// —> console.log the data
+// —> getting values from input ✅
+// —> console.log the data ✅
 
-Hackathon 0327
+### Hackathon 0327
 
-User Story:
+## User Story:
+
 As a user when I submit the form it should  show me that it is submitting.
 As a user I should not be able to submit again while it is submitting.
 As a user when I submit the form in a correct way (passes validation) I should see the form replaced with a simple success message.
 As a user when I submit the form in an incorrect way I should see that the form is no longer submitting and that there are errors.
 As a user who has incorrectly submitted the form I should see an error under each field that has failed validation. The error should be specific to the field ("Not a valid phone number", "No bookings outside of England, Wales or Scotland").
 
-Objective:
+## Objective:
 
-- have the state in reducer
+- have the state in reducer ✅
 
-- use the state into dispatch actions
+- use the state into dispatch actions ✅
 
-- Validate emails and phone numbers
-- Validation area codes (Eng, Wales, Scotland) with API
+- Validate emails and phone numbers ✅
 
-- onSubmit - Loading state
+- Validation area codes (Eng, Wales, Scotland) with API ✅
 
-- Validation passes
+- onSubmit - Loading state ✅
 
-* hide form
-* show successfully submitted message
+- Validation passes ✅
 
-- Validation fails - cancel loading
+- Hide form ✅
 
-* show specific errors (at specific fields)
+- Show message: "successfully submitted" ✅
+
+- Validation fails - cancel loading ✅
+
+- show specific errors (at specific fields) ✅
 
 “Use client”
 
-Plan:
+# Plan:
+
 // —> Refactor existing useState codes to reducer function
 // —> Create state object
 // —> Create reducer function
@@ -133,26 +137,28 @@ Plan:
 // —> new action “SUBMIT_STARTED"
 // —> use new state property to show/hide different button text
 
-MVPs
-MVP 1:
+## MVPs
+
+# MVP 1:
 
 - refactor existing useStates to reducer function
 - implement dispatch
 - check if it works
 
-MVP 2:
+# MVP 2:
 
 - validation : input types and formats
 - validation of postcodes : with external API
-
-MVP 3:
-
 - loading state
+
+# MVP 3:
+
 - on success: hide form and success
   —> dreamer room: success message
 - on fail: cancel loading and error messages
 
-MVP 4:
+# MVP 4:
 
+- stretch goals: polish site
+- completing other components: founders page
 - dreamer room
-- stretch goals

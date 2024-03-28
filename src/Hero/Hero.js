@@ -12,10 +12,10 @@ export default function Hero() {
 
       <div className="additional-info">
         <h1 id="add-info-header">Discover the Perfect Fireplace ...</h1>
-        <p id="add-info-text">
-          <Link href="/booking" className="link"> Book Consultation</Link>
-        </p>
       </div>
+      <p id="add-info-text">
+          <Link href="/booking" className="link"> Book Consultation</Link>
+      </p>
     </>
   );
 }

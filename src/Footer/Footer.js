@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer-text">
-            <i></i>Fireplace Palace
+            <i>Fireplace Palace</i>
           </p>
           <a className="footer-text" id="email">
             info@firepalace.co.uk

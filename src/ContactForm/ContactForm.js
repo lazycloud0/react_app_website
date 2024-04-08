@@ -66,6 +66,7 @@ export default function ContactForm() {
   function handleSubmit(e) {
     e.preventDefault();
     // if all input fields are filled
+    // could be refactored -
     if (
       state.name &&
       state.postcode &&
@@ -83,6 +84,7 @@ export default function ContactForm() {
       });
     }
     // if there are missing input fields
+    // could use attribute required
     if (
       !state.name ||
       !state.postcode ||
@@ -122,9 +124,11 @@ export default function ContactForm() {
         country === "Scotland"
       ) {
         // upon success: => FETCH SUCCESS
+        // could be more detailed request handlers: on 200, 204, etc
         dispatch({ type: "FETCH_SUCCESS" });
       } else {
         // upon error: => FETCH ERROR
+        // // could use without and use state and pass props to change color
         dispatch({ type: "FETCH_ERROR" });
       }
       // error handling
@@ -155,6 +159,7 @@ export default function ContactForm() {
             </label>
             <input
               type="text"
+              required
               id="name"
               name="name"
               className="labels-inputs"

@@ -3,6 +3,7 @@ import Review from "@/src/Review/Review.js";
 import Main from "../src/Main/Main.js";
 import RootLayout from "./layout.js";
 
+// home component
 // called rootlayout plus children components
 export default function Home() {
   return (
